@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+body{
+  background-color: rgb(19, 19, 19);
+  background-image: url('/assets/media/images/leaf20percOpacity.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  font-family: 'Varela Round', sans-serif;
+  color: #eee;
+}
+h1{
+  font-size: 2em;
+}
+.time-wasted{
+  margin: 0px auto;
+  margin-top: 2rem;
+  width: 90%;
+}
+.chatbox-container{
+  width: 90%;
+  height: 30em;
+  margin: 0px auto;
+  margin-top: 0.2rem;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.09);
+
+}
+
+#chat-window {
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 25.5em;
+}
+
+.chatbox-input{
+  width: 90%;
+  margin: 0px auto;
+  margin-top: 2rem;
+  display: flex;
+  align-items:center;
+}
+
+#profilePicture {
+  width: 50px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  height: auto;
+  margin-right: 0.5rem;
+}
+
+/* name */
+#handle{
+  font-weight: bold;
+}
+
+/* message input */
+
+.chatbox-input input{
+  width: 100%;
+  background: none;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  padding:10px;
+  margin-left: 0.9rem;
+  margin-right: 0.9rem;
+  color:white;
+}
+
+#feedback {
+  color: rgb(116, 113, 113);
+}
+/* send message button */
+#send{
+  padding:13px;
+  background-color: rgb(145, 145, 145);
+  color:#eee;
+  border-radius: 50%;
+  border: 0px;
+}
+
+
+#typingIndicator {
+  width: 3em;
+  height: auto;
+}
+
+#userMessageIndicator {
+  width: 2em;
+  height: auto;
+  border-radius: 50%;
+}

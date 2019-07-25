@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>xsentra LLC</title>
+
+    <% include partials/head.ejs %>
+
+    <!-- socket connection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+
+    <div class="time-wasted">
+    <span style="font-weight: bold">Run Time:
+      <div class="countup" id="countup1" style="color:red">
+      <span class="timeel days">00</span>
+      <span class="timeel timeRefDays">days</span>
+      <span class="timeel hours">00</span>
+      <span class="timeel timeRefHours">hours</span>
+      <span class="timeel minutes">00</span>
+      <span class="timeel timeRefMinutes">minutes</span>
+      <span class="timeel seconds">00</span>
+      <span class="timeel timeRefSeconds">seconds</span>
+      </div>
+    </span>
+    </div>
+    <div class="chatbox-container">
+      <i class="fas fa-cog fa-spin"></i> development stage ( chat history will not be saved. )
+      <div id="chat-window">
+        <div id="output" style="margin:10px;padding:5px;"></div>
+        <div id="feedback"></div>
+      </div>
+    </div>
+
+    <div class="chatbox-input">
+    <img id="profilePicture" src="/assets/media/images/temp.png"/>
+    <span id="handle">Name</span>
+    <input onfocus="checkForUser()" onkeyup="Send()" id="message" type="text" placeholder="Message"/> <button id="send" onclick="clearAfterSend()"> <i class="fas fa-paper-plane"></i> </button>
+    </div>
+    <div class="hidden">
+      
+    </div>
+
+    <!-- counter -->
+    <script src="/assets/js/countupTime.js"></script>
+
+    <!-- chat -->
+    <script src="/assets/js/chat.js" charset="utf-8"></script>
+
+  </body>
+</html>
