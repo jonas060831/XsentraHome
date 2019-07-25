@@ -31,17 +31,17 @@ function checkForUser() {
           if (ss == null || ss == "") {
             //keep asking
         }else {
-          if (ss === $JONAS_ENV) {
+          if (ss === "2121") {
             name.innerHTML = 'Jonas'
             pp.src = "/assets/media/images/pp/Jonas.jpg"
 
-          }else if(ss === $NINO_ENV){
+          }else if(ss === "6773"){
             name.innerHTML = 'Niño'
             pp.src = "/assets/media/images/pp/Niño.jpg"
-          }else if(ss === $PICH_ENV){
+          }else if(ss === "3749"){
             name.innerHTML = 'Pich'
             pp.src = "/assets/media/images/pp/Pich.jpg"
-          }else if(ss === $CARLOS_ENV){
+          }else if(ss === "1121"){
             name.innerHTML = 'Carlos'
             pp.src = "/assets/media/images/pp/Carlos.jpg"
           }
