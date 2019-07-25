@@ -1,6 +1,6 @@
 //Make Connection
 
-var socket = io.connect('localhost:9000');
+var socket = io.connect('http://54.215.128.90:9000');
 
 var message = document.getElementById('message'),
     handle = document.getElementById('handle'),
