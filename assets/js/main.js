@@ -31,13 +31,19 @@ function checkForUser() {
           if (ss == null || ss == "") {
             //keep asking
         }else {
-          if (ss === "2121") {
+          if (ss === process.env.JONAS_ENV) {
             name.innerHTML = 'Jonas'
             pp.src = "/assets/media/images/pp/Jonas.jpg"
 
-          }else if(ss === "4321"){
+          }else if(ss === process.env.NIÑO_ENV){
             name.innerHTML = 'Niño'
             pp.src = "/assets/media/images/pp/Niño.jpg"
+          }else if(ss === process.env.PICH_ENV){
+            name.innerHTML = 'Pich'
+            pp.src = "/assets/media/images/pp/Pich.jpg"
+          }else if(ss === process.env.CARLOS_ENV){
+            name.innerHTML = 'Carlos'
+            pp.src = "/assets/media/images/pp/Carlos.jpg"
           }
         }
       }
