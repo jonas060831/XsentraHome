@@ -31,7 +31,7 @@ function checkForUser() {
           if (ss == null || ss == "") {
             //keep asking
         }else {
-          if (ss === process.env.JONAS_ENV) {
+          if (ss === String(process.env.JONAS_ENV)) {
             name.innerHTML = 'Jonas'
             pp.src = "/assets/media/images/pp/Jonas.jpg"
 
