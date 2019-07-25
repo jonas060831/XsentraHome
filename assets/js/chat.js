@@ -7,8 +7,7 @@ var message = document.getElementById('message'),
     button = document.getElementById('send'),
     output = document.getElementById('output'),
     feedback = document.getElementById('feedback'),
-    imageURL = document.getElementById('profilePicture').src,
-    sent = new Audio('/assets/media/sounds/haptics/your-turn.ogg');
+    imageURL = document.getElementById('profilePicture').src;
 
 //Emit events
 // send button
@@ -42,6 +41,8 @@ message.addEventListener('keyup', function(event){
 socket.on('chat', function(data){
 
   feedback.innerHTML = "";
+
+  var sent = new Audio('/assets/media/sounds/haptics/your-turn.ogg');
 
   if (data.handle == "Jonas") {
     output.innerHTML += '<p><strong style="color:rgb(255, 0, 35)">' + data.handle + '</strong>' + ':&nbsp;' + data.message + '</p>';
