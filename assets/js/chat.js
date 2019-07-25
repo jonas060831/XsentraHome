@@ -1,6 +1,6 @@
 //Make Connection
 //ec2 http://54.215.128.90:9000
-var socket = io.connect('localhost:9000');
+var socket = io.connect('http://54.215.128.90:9000');
 
 var message = document.getElementById('message'),
     handle = document.getElementById('handle'),
@@ -48,6 +48,12 @@ socket.on('chat', function(data){
     sent.play();
   }else if(data.handle == "Niño"){
     output.innerHTML += '<p><strong style="color:rgb(3, 186, 254)">' + data.handle + '</strong>' + ':&nbsp;' + data.message + '</p>';
+    sent.play();
+  }else if(data.handle == "Pich"){
+    output.innerHTML += '<p><strong style="color:rgb(66, 249, 2)">' + data.handle + '</strong>' + ':&nbsp;' + data.message + '</p>';
+    sent.play();
+  }else if(data.handle == "Carlos"){
+    output.innerHTML += '<p><strong style="color:rgb(255, 122, 0)">' + data.handle + '</strong>' + ':&nbsp;' + data.message + '</p>';
     sent.play();
   }
 });
