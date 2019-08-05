@@ -1,15 +1,20 @@
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const links = document.querySelector(".nav-links li");
+const chatboxContainer = document.querySelector(".chatbox-container");
+//show full page menu when using tablet and mobile
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle("open");
+});
 
 var button = document.getElementById('send');
 
 function Send(){
-
   var message = document.getElementById('message'),
   button = document.getElementById('send');
   button.style.background = 'rgb(37, 187, 93)';
   if (message.value) {
-
       button.disabled = false;
-
   }else{
     button.disabled = true;
     button.style.background = 'rgb(145, 145, 145)';
@@ -27,7 +32,7 @@ function checkForUser() {
       if (name.innerHTML == 'Name') {
         // ask the last digit of social and query the info
 
-        var ss = prompt("Please enter the last four digit of your social:", "1234");
+        var ss = prompt("Enter Your Name:", "");
           if (ss == null || ss == "") {
             //keep asking
         }else {
@@ -44,7 +49,14 @@ function checkForUser() {
           }else if(ss === "1121"){
             name.innerHTML = 'Carlos'
             pp.src = "/assets/media/images/pp/Carlos.jpg"
+          }else {
+            name.innerHTML = ss
+            pp.src = '/assets/media/images/temp.png'
           }
         }
       }
+}
+
+function openChatBox(){
+  chatboxContainer.classList.toggle("open");
 }

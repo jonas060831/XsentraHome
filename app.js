@@ -16,8 +16,6 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-
-
 //socket setup
 var io = socket(server);
 

@@ -8,40 +8,108 @@
 
     <!-- socket connection -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" charset="utf-8"></script>
-    
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/media/images/favicon-2.png">
+
+    <link rel="stylesheet" href="/assets/css/main.css">
   </head>
   <body>
 
-    <div class="time-wasted">
-    <span style="font-weight: bold">Run Time:
-      <div class="countup" id="countup1" style="color:red">
-      <span class="timeel days">00</span>
-      <span class="timeel timeRefDays">days</span>
-      <span class="timeel hours">00</span>
-      <span class="timeel timeRefHours">hours</span>
-      <span class="timeel minutes">00</span>
-      <span class="timeel timeRefMinutes">minutes</span>
-      <span class="timeel seconds">00</span>
-      <span class="timeel timeRefSeconds">seconds</span>
-      </div>
-    </span>
-    </div>
+
+      <button class="chat-button" type="button" name="ChatBox-Button" onclick="openChatBox()">
+        <img src="/assets/media/images/chat.png" style="width:50px;height:auto"/>
+      </button>
+
+    <!-- chatbox -->
     <div class="chatbox-container">
-      <i class="fas fa-cog fa-spin"></i> development stage ( chat history will not be saved. )
+      <!-- header -->
+      <div class="chatbox-header">
+        <table class="header-table-container">
+          <tr>
+            <th>
+              <i class="fas fa-cog fa-spin"></i> chat history will not be saved.
+            </th>
+            <th>
+              <button class="chatbox-close" onclick="openChatBox()"><i class="fas fa-times"></i></button>
+
+            </th>
+          </tr>
+        </table>
+      </div>
+      <!-- body -->
       <div id="chat-window">
         <div id="output" style="margin:10px;padding:5px;"></div>
         <div id="feedback"></div>
       </div>
+      <!-- footer -->
+      <div class="chatbox-input">
+      <img id="profilePicture" src="/assets/media/images/temp.png"/>
+      <input onfocus="checkForUser()" onkeyup="Send()" id="message" type="text" placeholder="Message"/>
+      <button id="send" onclick="clearAfterSend()"> <i class="fas fa-paper-plane"></i> </button>
+      <br/>
+      <span style="display:none" id="handle">Name</span>
+      </div>
     </div>
 
-    <div class="chatbox-input">
-    <img id="profilePicture" src="/assets/media/images/temp.png"/>
-    <span id="handle">Name</span>
-    <input onfocus="checkForUser()" onkeyup="Send()" id="message" type="text" placeholder="Message"/> <button id="send" onclick="clearAfterSend()"> <i class="fas fa-paper-plane"></i> </button>
+    <!-- chatbox input -->
+    <div class="version-released">
+      <!-- counter since -->
+      <div class="time-wasted">
+      <span>
+        <div class="countup" id="countup1">
+          <a href="/">Web Version 1.0 Released 01.08.19 / </a>
+          <span class="timeel days">00</span>
+          <span class="timeel timeRefDays">days</span>
+          <span class="timeel hours">00</span>
+          <span class="timeel timeRefHours">hours</span>
+          <span class="timeel minutes">00</span>
+          <span class="timeel timeRefMinutes">minutes</span>
+          <span class="timeel seconds">00</span>
+          <span class="timeel timeRefSeconds">seconds</span>
+        </div>
+      </span>
+      </div>
     </div>
-    <div class="hidden">
 
-    </div>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="company-brand">
+        <li>
+          <a href="#">
+            <img src="/assets/media/images/favicon.png" style="margin:10px;width:2.5em;height:auto;"/>
+          </a>
+        </li>
+      </ul>
+      <ul class="nav-links">
+
+        <li><a href="#">About</a></li>
+        <li><a href="#">Our Partners</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Landing Page -->
+    <section class="Landing">
+      <h1>BUSINESS JUST LIKE HOW YOU IMAGINE</h1>
+      <br>
+      <div class="Landing-Subtext">
+        Xsentra LLC. Caters to all kind of businesses worldwide, so we can provide all the things that you NEED.
+      </div>
+      <br><br>
+      <div class="learn-more">
+        <a href="/"><i class="fas fa-chevron-circle-down"></i> LEARN MORE TODAY</a>
+      </div>
+    </section>
+
+
+    <!--main js -->
+    <script src="/assets/js/main.js" charset="utf-8"></script>
 
     <!-- counter -->
     <script src="/assets/js/countupTime.js"></script>
